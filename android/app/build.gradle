@@ -49,6 +49,8 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        applicationIdSuffix appIdSuffix
+        resValue "string", "app_name", appName
     }
 
     buildTypes {
@@ -65,3 +67,11 @@ flutter {
 }
 
 dependencies {}
+
+task copySources(type: Copy) {
+    from "src/$flavor/res" 
+    into 'src/main/res'
+}
+tasks.whenTaskAdded { task ->
+    task.dependsOn copySources
+}
