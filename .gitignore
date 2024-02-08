@@ -24,7 +24,6 @@ migrate_working_dir/
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
-**/android/app/src/main/res/mipmap*/
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
@@ -45,4 +44,5 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 **/android/app/google-services.json
-**/ios/GoogleService-Info.plist
+**/ios/Flutter/Dart-Defines.xcconfig
+**/ios/Runner/GoogleService-Info.plist
