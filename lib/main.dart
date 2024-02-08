@@ -1,6 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:reference_app/firebase_options_prod.dart' as prod;
+import 'package:reference_app/firebase_options_dev.dart' as dev;
 
-void main() {
+const flavor = String.fromEnvironment('flavor');
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  print(flavor);
+
+  final firebaseOptions = flavor == 'prod'
+      ? prod.DefaultFirebaseOptions.currentPlatform
+      : dev.DefaultFirebaseOptions.currentPlatform;
+
+  await Firebase.initializeApp(options: firebaseOptions);
   runApp(const MyApp());
 }
 
