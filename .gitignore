@@ -46,3 +46,5 @@ app.*.map.json
 **/android/app/google-services.json
 **/ios/Flutter/Dart-Defines.xcconfig
 **/ios/Runner/GoogleService-Info.plist
+lib/**/*.g.dart
+lib/**/*.freezed.dart
