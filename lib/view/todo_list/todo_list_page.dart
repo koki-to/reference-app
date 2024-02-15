@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -6,6 +7,7 @@ import '../../model/entity/todo.dart';
 import '../todo_edit/todo_edit_page.dart';
 import 'todo_list_controller.dart';
 
+@RoutePage()
 class TodoListPage extends ConsumerWidget {
   const TodoListPage({super.key});
 
