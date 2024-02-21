@@ -22,4 +22,20 @@ class Validator {
     }
     return null;
   }
+
+  String? requiredString(String? value) {
+    if (value == null || value.isEmpty) {
+      return '文字を入力してください';
+    }
+    return null;
+  }
+}
+
+extension ValidatorExt on Validator {
+  String? required(String value) {
+    if (value.isEmpty) {
+      return '入力してください';
+    }
+    return null;
+  }
 }

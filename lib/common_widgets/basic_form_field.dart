@@ -6,11 +6,13 @@ class BasicFormField extends ConsumerStatefulWidget {
     required this.onChanged,
     required this.validator,
     required this.hintText,
+    this.initialValue,
     super.key,
   });
   final void Function(String)? onChanged;
   final String? Function(String?)? validator;
   final String? hintText;
+  final String? initialValue;
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() => _BasicFormFieldState();
@@ -22,7 +24,7 @@ class _BasicFormFieldState extends ConsumerState<BasicFormField> {
   @override
   void initState() {
     super.initState();
-    controller = TextEditingController();
+    controller = TextEditingController(text: widget.initialValue);
   }
 
   @override

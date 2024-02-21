@@ -11,6 +11,10 @@ final firebaseAuthProvider = Provider(
   (_) => FirebaseAuth.instance,
 );
 
-final formKeyProvider = Provider(
+final loginFormKeyProvider = Provider(
+  (ref) => GlobalKey<FormState>(),
+);
+
+final todoEditFormKeyProvider = Provider(
   (ref) => GlobalKey<FormState>(),
 );

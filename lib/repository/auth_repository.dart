@@ -59,6 +59,5 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  // TODO: implement currentUser
   User? get currentUser => auth.currentUser;
 }

@@ -16,7 +16,7 @@ class LoginPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final formKey = ref.watch(formKeyProvider);
+    final formKey = ref.watch(loginFormKeyProvider);
     final controller = ref.watch(loginControllerProvider.notifier);
     final pageState =
         ref.watch(loginControllerProvider.select((value) => value.pageState));

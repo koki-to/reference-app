@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../config/router.gr.dart';
 import '../model/entity/todo.dart';
 import '../view/todo_edit/todo_edit_page.dart';
 
@@ -15,9 +17,10 @@ class TodoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute<TodoEditPage>(
-            builder: (_) => TodoEditPage(todo: todo),
+        context.router.push(
+          TodoEditRoute(
+            todo: todo,
+            mode: TodoMode.edit,
           ),
         );
       },
